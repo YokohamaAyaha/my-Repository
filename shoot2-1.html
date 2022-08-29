@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <style>
+            body{
+                background-color: rgb(123, 138, 186);
+            }
+
+            #box{
+                margin:60px;
+                padding:60px;
+                text-align: center;
+                background-color: white;
+            }
+
+            h1{
+                font-size: 60px;
+            }
+
+            p{
+                font-size: 20px;
+            }
+
+            #syokyu{
+               font-size:30px;
+               border: 10px outset #4e4a4da1;
+            }
+
+            #cyukyu{
+               font-size:30px;
+               border: 10px outset #4e4a4da1;
+            }
+
+            #jyokyu{
+               font-size:30px;
+               border: 10px outset #4e4a4da1;
+            }
+
+            #table{
+                margin:auto;
+            }
+
+        </style>
+        <title>シューティングゲーム</title>
+    </head>
+    <body>
+    <div id="box">
+        <h1>シューティングゲーム</h1>
+        <p>-player-</p>
+        <table id="table">
+            <tr>
+                <th><img src="player01.png" width='100'/></th>
+                <th><img src="player02.png"  width='100'></th>
+                <th><img src="player03.png"  width='100'></th>
+            </tr>
+            <tr>
+                <td><button id ="syokyu">初級編</button></td>
+                <td><button id ="cyukyu">中級編</button></td>
+                <td><button id ="jyokyu">上級編</button></td>
+            </tr>
+        </table>
+    </div>
+        <script>
+            const music = new Audio('retroparty.mp3');
+            $(window).on('load', function (){
+                music.play();
+            });
+
+            $("#syokyu").click(function(){
+                window.location.href='shoot2-2.html';
+            })
+            $("#cyukyu").click(function(){
+                window.location.href='shoot2-3.html';
+            })
+            $("#jyokyu").click(function(){
+                window.location.href='shoot2-4.html';
+            })
+        </script>
+    </body>
+</html>
